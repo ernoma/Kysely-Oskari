@@ -1,0 +1,25 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+#publishedMap {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#featurePopup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 500;
+    display: none;
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    background: #fcf3cf;
+    padding: 20px;
+    text-align: center;
+}
