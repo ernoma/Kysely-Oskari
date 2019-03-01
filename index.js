@@ -64,7 +64,7 @@ $(function() {
 	    channel.log('GetFeatures: ', data);
 	});
 
-	$.getJSON('https://turkukartalle.karttatehdas.fi/features', function(data) {
+	$.getJSON('http://karttatehdas.fi:8080/geoserver/oskari/ows?service=WFS&version=1.1.0&request=GetFeature&typeNames=oskari:kysely_oskari_paikat&maxFeatures=50&outputFormat=application%2Fjson&srsName=EPSG:3067', function(data) {
 	    console.log(data);
 	    KyselyOskari.features = data.features;
 

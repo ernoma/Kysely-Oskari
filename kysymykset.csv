@@ -1,4 +1,4 @@
-KYSYMYS,KATEGORIA,KUVA_URL,INFO_URL,X,Y
-Mitä toivoisit tälle alueelle rakennettavan?,asemakaavoitus,images/aitovuori_oas.png,https://www.tampere.fi/cgi-bin/kaava/kaavadoc?8508,23.97338,61.53619
-Miten tämän alueen ilmastovaikutusta voisi pienentää?,ympäristö,images/kaleva.jpg,https://www.tampere.fi/asuminen-ja-ymparisto/ymparisto-ja-luonto/kestava-kehitys.html,23.81687,61.49302
-Avointa palautetta Pohjois-Tampereen yleiskaavoitukseen?,yleiskaavoitus,images/Pohjois-Tampere-yleiskaavoitus-logo.png,https://www.tampere.fi/asuminen-ja-ymparisto/kaavoitus/yleiskaavoitus.html,23.83846,61.63122
+KYSYMYS,KATEGORIA,KUVA_URL,KUVA_LISENSSI,INFO_URL,X,Y
+Mitä toivoisit tälle alueelle rakennettavan?,asemakaavoitus,images/aitovuori_oas.png,,https://www.tampere.fi/cgi-bin/kaava/kaavadoc?8508,23.97338,61.53619
+Miten tämän alueen ilmastovaikutusta voisi pienentää?,ympäristö,images/kaleva.jpg,PD,https://www.tampere.fi/asuminen-ja-ymparisto/ymparisto-ja-luonto/kestava-kehitys.html,23.81687,61.49302
+Avointa palautetta Pohjois-Tampereen yleiskaavoitukseen?,yleiskaavoitus,images/Pohjois-Tampere-yleiskaavoitus-logo.png,,https://www.tampere.fi/asuminen-ja-ymparisto/kaavoitus/yleiskaavoitus.html,23.83846,61.63122
