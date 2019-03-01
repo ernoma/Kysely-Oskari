@@ -2,8 +2,8 @@
 
 var IFRAME_DOMAIN = 'https://kartta.paikkatietoikkuna.fi';
 var KyselyOskari = {
-    features: null,
-    lastClickedFeatureIndex: -1
+    // features: null,
+    lastClickedFeature: null
 }
 
 $(function() {
@@ -66,7 +66,7 @@ $(function() {
 
 	$.getJSON('http://karttatehdas.fi:8080/geoserver/oskari/ows?service=WFS&version=1.1.0&request=GetFeature&typeNames=oskari:kysely_oskari_paikat&maxFeatures=50&outputFormat=application%2Fjson&srsName=EPSG:3067', function(data) {
 	    console.log(data);
-	    KyselyOskari.features = data.features;
+	    // KyselyOskari.features = data.features;
 
 	    var params = [data, {
 			centerTo: true,
@@ -105,20 +105,23 @@ $(function() {
 		'MapClickedEvent',
 		function(data) {
 			console.log('MapClickedEvent', data);
-			console.log(KyselyOskari.lastClickedFeatureIndex);
+			console.log(KyselyOskari.lastClickedFeature);
 
-			if (KyselyOskari.lastClickedFeatureIndex != -1) {
-				const feature = KyselyOskari.features[KyselyOskari.lastClickedFeatureIndex];
-				var html = '<p><b>' + feature.properties.nimi + '</b></p>' +
+			if (KyselyOskari.lastClickedFeature != null) {
+				const feature = KyselyOskari.lastClickedFeature;
+				var html = '<p><b>' + feature.properties.kysymys + '</b></p>' +
 					'<p><img src="' + feature.properties.kuva_url + '"></p>' +
-					'<p>' + feature.properties.kuva_license_text + '</p>' +
-					'<p><a href="' + feature.properties.kuva_info_url + '" target="_blank">kuva Filckrissä</a></p>' +
-					'<p><a href="' + feature.properties.license_info_url + '" target="_blank">lisenssi</a></p>';
+					'<input type="text" placeholder="Vastaus...">' +
+					'<button>Lähetä vastaus</button>' +
+					'<p><a href="' + feature.properties.info_url + '" target="_blank">lisätieto</a></p>' +
+					'<p>' +
+					(feature.properties.kuva_lisenssi != null ? 'kuvan lisenssi: ' + feature.properties.kuva_lisenssi : 'kuvan lisenssi: tuntematon') +
+					'</p>';
 				$('#featurePopup').html(html);
 				$('#featurePopup').css('top', data.y);
 				$('#featurePopup').css('left', data.x);
 				$('#featurePopup').show();
-				KyselyOskari.lastClickedFeatureIndex = -1;
+				KyselyOskari.lastClickedFeature = null;
 			}
 			else {
 				$('#featurePopup').hide();
@@ -132,7 +135,7 @@ $(function() {
 
     channel.handleEvent('FeatureEvent', function(data) {
 		console.log('FeatureEvent', data);
-		KyselyOskari.lastClickedFeatureIndex = parseInt(data.features[0].id.substr(1, 1));
+		KyselyOskari.lastClickedFeature = data.features[0].geojson.features[0];
     });
 
 });
