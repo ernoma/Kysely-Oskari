@@ -12,14 +12,19 @@
 </head>
 
 <body>
-  <iframe id="publishedMap" src="https://kartta.paikkatietoikkuna.fi/published/fi/bd08b8a1-b9d1-4859-8517-59fe38180bca" allow="geolocation"></iframe>
-  <div id="featurePopup"></div>
-    <!--<iframe
-        id="publishedMap"
-        src="http://karttatehdas.fi:8080/?lang=fi&uuid=318a5bfa-fc12-4677-835c-11562b31e497"
-        allow="geolocation">
-    </iframe>-->
-    
+    <section class="container">
+        <div id="sidePanel"></div>
+        <div id="mainContent">
+            <iframe id="publishedMap" src="https://kartta.paikkatietoikkuna.fi/published/fi/bd08b8a1-b9d1-4859-8517-59fe38180bca" allow="geolocation">
+            </iframe>
+            <div id="featurePopup"></div>
+                <!--<iframe
+                    id="publishedMap"
+                    src="http://karttatehdas.fi:8080/?lang=fi&uuid=318a5bfa-fc12-4677-835c-11562b31e497"
+                    allow="geolocation">
+                </iframe>-->
+        </div>
+    </section>
     <script src="lib/jquery-3.3.1.min.js"></script>
     <script src="lib/rpc-client.min.js"></script>
     <script src="index.js"></script>

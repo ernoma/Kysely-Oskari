@@ -4,6 +4,26 @@ html, body {
     margin: 0px;
 }
 
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+#sidePanel {
+    width: 20%;
+    height: 100%;
+    margin: 0px;
+    float: left;
+}
+
+#mainContent {
+    width: 80%;
+    height: 100%;
+    margin: 0px;
+    margin-left: 20%;
+}
+
 #publishedMap {
     border: none;
     width: 100%;
@@ -12,11 +32,11 @@ html, body {
 
 #featurePopup {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 10px;
+    left: calc(50% - 200px);
     z-index: 500;
     display: none;
-    width: 350px;
+    width: 400px;
     border: 1px solid gray;
     border-radius: 2px;
     background: #fcf3cf;
