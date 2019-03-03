@@ -14,10 +14,12 @@ GRANT ALL PRIVILEGES ON DATABASE kysely_oskari to kysely_oskari_user;
 DROP TABLE IF EXISTS kysely_oskari_paikat; 
 CREATE TABLE kysely_oskari_paikat (
        kysymys varchar,
+       tyyppi varchar,
        kategoria varchar,
        kuva_url varchar,
        kuva_lisenssi varchar,
        info_url varchar,
+       address varchar,
        x float,
        y float,
        geom geometry(point),
@@ -31,10 +33,12 @@ GRANT SELECT ON ALL TABLES IN SCHEMA public TO kysely_oskari_user;
 
 COPY kysely_oskari_paikat (
       kysymys,
+      tyyppi,
       kategoria,
       kuva_url,
       kuva_lisenssi,
       info_url,
+      address,
       x,
       y
 ) FROM '/home/ubuntu/Kysely-Oskari/kysymykset.csv' WITH NULL AS '' CSV HEADER;

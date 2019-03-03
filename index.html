@@ -1,32 +1,49 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-    <title>Kysely-Oskari</title>
-    <meta name="author" content="Erno">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-</head>
+        <title>Kysely-Oskari</title>
+        <meta name="author" content="Erno">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="lib/semantic-ui/dist/semantic.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
 
-<body>
-    <section class="container">
-        <div id="sidePanel"></div>
-        <div id="mainContent">
-            <iframe id="publishedMap" src="https://kartta.paikkatietoikkuna.fi/published/fi/bd08b8a1-b9d1-4859-8517-59fe38180bca" allow="geolocation">
-            </iframe>
-            <div id="featurePopup"></div>
-                <!--<iframe
-                    id="publishedMap"
-                    src="http://karttatehdas.fi:8080/?lang=fi&uuid=318a5bfa-fc12-4677-835c-11562b31e497"
-                    allow="geolocation">
-                </iframe>-->
-        </div>
-    </section>
-    <script src="lib/jquery-3.3.1.min.js"></script>
-    <script src="lib/rpc-client.min.js"></script>
-    <script src="index.js"></script>
-</body>
+    <body>
+        <section class="container">
+            <div id="sidePanel" class="ui segment">
+                <h1 class="ui header">Tervetuloa Tampereen kaupunkisuunnittelun palautepalveluun!</h1>
+                <p>Antaaksesi palautetta, napauta kartan punaisia kohdepiseitä.</p>
+                <div id="serviceRequestsDiv" class="ui segment">
+                    <p><b>Viimeisimmät palautteet:</b></p>
+                    <div class="ui segment">
+                        <div id="serviceFeedbacksList" class="ui list">
+                            <div id="feedbackLoader" class="ui active inverted dimmer">
+                                <div class="ui tiny text loader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mainContent" class="ui blurring segment">
+                <iframe id="publishedMap" src="https://kartta.paikkatietoikkuna.fi/published/fi/bd08b8a1-b9d1-4859-8517-59fe38180bca" allow="geolocation">
+                </iframe>
+                <div class="ui piled segment" id="featurePopup"></div>
+                    <!--<iframe
+                        id="publishedMap"
+                        src="http://karttatehdas.fi:8080/?lang=fi&uuid=318a5bfa-fc12-4677-835c-11562b31e497"
+                        allow="geolocation">
+                    </iframe>-->
+            </div>
+        </section>
+        <script src="lib/jquery-3.3.1.min.js"></script>
+        <script src="lib/rpc-client.min.js"></script>
+        <script src="lib/semantic-ui/dist/semantic.min.js"></script>
+        <script src='lib/proj4.js'></script>
+        <script src='lib/turf.min.js'></script>
+        <script src="index.js"></script>
+    </body>
 </html>

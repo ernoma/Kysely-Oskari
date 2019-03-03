@@ -1,4 +1,5 @@
-KYSYMYS,KATEGORIA,KUVA_URL,KUVA_LISENSSI,INFO_URL,X,Y
-Mitä toivoisit tälle alueelle rakennettavan?,asemakaavoitus,images/aitovuori_oas.png,,https://www.tampere.fi/cgi-bin/kaava/kaavadoc?8508,23.97338,61.53619
-Miten tämän alueen ilmastovaikutusta voisi pienentää?,ympäristö,images/kaleva.jpg,PD,https://www.tampere.fi/asuminen-ja-ymparisto/ymparisto-ja-luonto/kestava-kehitys.html,23.81687,61.49302
-Avointa palautetta Pohjois-Tampereen yleiskaavoitukseen?,yleiskaavoitus,images/Pohjois-Tampere-yleiskaavoitus-logo.png,,https://www.tampere.fi/asuminen-ja-ymparisto/kaavoitus/yleiskaavoitus.html,23.83846,61.63122
+KYSYMYS,TYYPPI,KATEGORIA,KUVA_URL,KUVA_LISENSSI,INFO_URL,ADDRESS,X,Y
+Mitä toivoisit tälle alueelle rakennettavan?,teksti,asemakaavoitus,images/aitovuori_oas.png,,https://www.tampere.fi/cgi-bin/kaava/kaavadoc?8508,Aitovuori,23.97338,61.53619
+Miten tämän alueen ilmastovaikutusta voisi pienentää?,teksti,ympäristö,images/kaleva.jpg,PD,https://www.tampere.fi/asuminen-ja-ymparisto/ymparisto-ja-luonto/kestava-kehitys.html,Kaleva,23.81687,61.49302
+Avointa palautetta Pohjois-Tampereen yleiskaavoitukseen?,teksti,yleiskaavoitus,images/Pohjois-Tampere-yleiskaavoitus-logo.png,,https://www.tampere.fi/asuminen-ja-ymparisto/kaavoitus/yleiskaavoitus.html,Pohjois-Tampere,23.83846,61.63122
+Piirrä kerrostaloille sopiva alue,piirto_alue,kaupunkisuunnittelu,,,,,23.9462,61.5107
